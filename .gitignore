@@ -1,0 +1,23 @@
+# Java build output
+/out/
+*.class
+
+# VS Code workspace settings
+.vscode/
+
+# macOS
+.DS_Store
+
+# IDE files
+*.iml
+.idea/
+*.ipr
+*.iws
+
+# Build tools
+.gradle/
+build/
+target/
+
+# Logs
+*.log
