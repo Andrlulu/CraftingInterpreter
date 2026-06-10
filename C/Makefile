@@ -1,16 +1,20 @@
-CC := gcc
-CFLAGS := -Wall -Wextra -std=c11
-TARGET := hello
-SRC := main.c
+CC = gcc
+CFLAGS = -Wall -Wextra -g
 
-all: $(TARGET)
+TARGETS = bin/linked_list bin/test
+SOURCES = linked_list.c
 
-$(TARGET): $(SRC)
+all: $(TARGETS)
+
+bin/linked_list: main.c $(SOURCES)
 	mkdir -p bin
-	$(CC) $(CFLAGS) -o bin/$(TARGET) $(SRC)
+	$(CC) $(CFLAGS) -o $@ main.c $(SOURCES)
 
-run: all
-	./bin/$(TARGET)
+bin/test: test.c $(SOURCES)
+	mkdir -p bin
+	$(CC) $(CFLAGS) -o $@ test.c $(SOURCES)
 
 clean:
-	rm -rf bin
+	rm -f $(TARGETS)
+
+.PHONY: all clean
