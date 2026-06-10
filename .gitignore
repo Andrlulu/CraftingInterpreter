@@ -2,6 +2,15 @@
 /out/
 *.class
 
+# C build output
+bin/
+*.o
+*.a
+*.so
+*.exe
+*.out
+*.dSYM/
+
 # VS Code workspace settings
 .vscode/
 
