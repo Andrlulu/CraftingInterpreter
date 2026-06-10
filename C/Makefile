@@ -2,7 +2,7 @@ CC = gcc
 CFLAGS = -Wall -Wextra -g
 
 TARGETS = bin/linked_list bin/test
-SOURCES = linked_list.c
+SOURCES = dlinked_list.c
 
 all: $(TARGETS)
 
